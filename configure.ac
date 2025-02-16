@@ -265,9 +265,7 @@ if test "x$enable_asan" = xyes; then
   AX_CHECK_COMPILE_FLAG([-fsanitize=address],
     [CXXFLAGS="$CXXFLAGS -fsanitize=address"],
     [asan_failed=yes])
-  AX_CHECK_LINK_FLAG([-fsanitize=address],
-    [LDFLAGS="$LDFLAGS -fsanitize=address"],
-    [asan_failed=yes])
+  AX_CHECK_LINK_FLAG([-fsanitize=address], [LDFLAGS="$LDFLAGS -fsanitize=address"], [asan_failed=yes])
   AX_CHECK_COMPILE_FLAG([-fno-omit-frame-pointer],
     [CXXFLAGS="$CXXFLAGS -fno-omit-frame-pointer"],
     [asan_failed=yes])
@@ -289,9 +287,7 @@ if test "x$enable_tsan" = xyes; then
   AX_CHECK_COMPILE_FLAG([-fsanitize=thread],
     [CXXFLAGS="$CXXFLAGS -fsanitize=thread"],
     [tsan_failed=yes])
-  AX_CHECK_LINK_FLAG([-fsanitize=thread],
-    [LDFLAGS="$LDFLAGS -fsanitize=thread"],
-    [tsan_failed=yes])
+  AX_CHECK_LINK_FLAG([-fsanitize=thread], [LDFLAGS="$LDFLAGS -fsanitize=thread"], [tsan_failed=yes])
   AX_CHECK_COMPILE_FLAG([-fno-omit-frame-pointer],
     [CXXFLAGS="$CXXFLAGS -fno-omit-frame-pointer"],
     [tsan_failed=yes])
@@ -307,9 +303,7 @@ if test "x$enable_ubsan" = xyes; then
   AX_CHECK_COMPILE_FLAG([-fsanitize=undefined],
     [CXXFLAGS="$CXXFLAGS -fsanitize=undefined"],
     [ubsan_failed=yes])
-  AX_CHECK_LINK_FLAG([-fsanitize=undefined],
-    [LDFLAGS="$LDFLAGS -fsanitize=undefined"],
-    [ubsan_failed=yes])
+  AX_CHECK_LINK_FLAG([-fsanitize=undefined], [LDFLAGS="$LDFLAGS -fsanitize=undefined"], [ubsan_failed=yes])
   AX_CHECK_COMPILE_FLAG([-fno-omit-frame-pointer],
     [CXXFLAGS="$CXXFLAGS -fno-omit-frame-pointer"],
     [ubsan_failed=yes])
