@@ -276,7 +276,6 @@ if test "x$enable_asan" = xyes; then
   # fix linkage in MacOs
   LIBTOOL_APP_LDFLAGS="$LIBTOOL_APP_LDFLAGS -fsanitize=address"
 fi
-fi
 
 if test "x$use_asm" = xyes; then
   AC_DEFINE(USE_ASM, 1, [Define this symbol to build in assembly routines])
