@@ -90,7 +90,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce,
 class CMainParams : public CChainParams {
 public:
     CMainParams() {
-        strNetworkID = "main";
+        strNetworkID = "yul";
         consensus.nSubsidyHalvingInterval = 210000;
         consensus.BIP34Height = 227931;
         consensus.BIP34Hash = uint256S(
@@ -132,14 +132,14 @@ public:
          * normal data. The characters are rarely used upper ASCII, not valid as
          * UTF-8, and produce a large 32-bit integer with any alignment.
          */
-        diskMagic[0] = 0xf9;
-        diskMagic[1] = 0xbe;
-        diskMagic[2] = 0xb4;
-        diskMagic[3] = 0xd9;
-        netMagic[0] = 0xe3;
-        netMagic[1] = 0xe1;
-        netMagic[2] = 0xf3;
-        netMagic[3] = 0xe8;
+        diskMagic[0] = 0xf8;
+        diskMagic[1] = 0xb3;
+        diskMagic[2] = 0xa4;
+        diskMagic[3] = 0xd8;
+        netMagic[0] = 0xe2;
+        netMagic[1] = 0xe0;
+        netMagic[2] = 0xf2;
+        netMagic[3] = 0xe7;
         nDefaultPort = 8333;
         nPruneAfterHeight = 100000;
 
@@ -156,9 +156,7 @@ public:
         // Note that of those with the service bits flag, most only support a
         // subset of possible options.
         // Bitcoin SV seeder
-        vSeeds.push_back(CDNSSeedData("bitcoinsv.io", "seed.bitcoinsv.io", true));
-        vSeeds.push_back(CDNSSeedData("satoshisvision.network", "seed.satoshisvision.network", true));
-        vSeeds.push_back(CDNSSeedData("bitcoinseed.directory", "seed.bitcoinseed.directory", true));
+        vSeeds.clear();  // YULネットワークのシードノードは後で設定
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 5);
